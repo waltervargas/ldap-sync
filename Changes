@@ -1,0 +1,16 @@
+Revision history for Covetel-LDAP-Sync
+
+0.01    Mon Mar 19 09:59:49 VET 2012
+        First version, sync Active Directory to OpenLDAP users and groups
+
+0.02    Sat Mar 31 04:54:07 VET 2012
+        Pagination support for Search over Active Directory
+
+0.03    Fri Apr  6 16:19:39 VET 2012
+        Logs Improve
+        Some Tests
+
+0.04 	Tue Apr 24 20:03:00 UTC 2012
+		- Field ObjectClass from config file
+		- RDN build with information from config file
+		- RDN with CN works!
