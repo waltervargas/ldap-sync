@@ -279,15 +279,10 @@ sub run {
 
     # Prepare search filter
     $self->_prepare_filter($target) unless $self->{user_filter};
-<<<<<<< HEAD
-    
-    if ($self->{dst}->bind && $self->{src}->bind){
-=======
 
     if ( $self->{dst}->bind && $self->{src}->bind ) {
     if ($self->{dst}->get_maintenance_gidNumber) {
 
->>>>>>> 79764b902c7a123499aee4da223b3ee4600ad775
         my $args;
         my $page;
         if ( $perpage > 0 ) {
@@ -350,20 +345,6 @@ sub run {
         }
 
         my $cookie;
-<<<<<<< HEAD
-        
-         $self->logger({
-                    level => 'info', 
-                    message => 'Filter ' . $self->{filter}
-                });
-        
-        
-        my $result = $perpage > 0 ? $self->{src}->paged_search($args) : $self->{src}->search($args) ;  
-        $self->handle_result($result, $target);
-          
-    } else {
-        if ($self->{src}->{mesg}->is_error){
-=======
 
         $self->logger(
             {
@@ -390,7 +371,6 @@ sub run {
     }
     else {
         if ( $self->{src}->{mesg}->is_error ) {
->>>>>>> 79764b902c7a123499aee4da223b3ee4600ad775
             my $mesg = $self->{src}->{mesg};
             die $mesg->error . "\n"
               . $mesg->code . "\n"
@@ -407,7 +387,7 @@ sub run {
               . $mesg->error_desc;
         }
         else {
-            say "Algo horrible esta pasando ! \n";
+            say "Something horrible is happening !";
         }
 
     }
